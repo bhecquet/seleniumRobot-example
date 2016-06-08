@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<suite name="Qwant Essai Suite" parallel="methods" verbose="1" thread-count="5">
+    <listeners>
+        <listener class-name="com.seleniumtests.reporter.SeleniumTestsReporter" />
+        <listener class-name="com.seleniumtests.core.TestRetryListener" />
+    </listeners>
+    
+    <!-- on écrit les paramètres qui lancent la page web et définissent l'environnement du test -->
+    <parameter name="appURL" value="https://www.qwant.fr"/>
+    <parameter name="browser" value="*chrome" />  <!--"*firefox, *chrome, *iexplore, *android"-->
+    <parameter name="runMode" value="LOCAL" /> <!--LOCAL or ExistingGrid -->
+    <parameter name="webDriverGrid" value="http://localhost:4444/wd/hub" /> 
+    <parameter name="webSessionTimeOut" value="120000" />
+    <parameter name="maxConcurrentWebSessions" value="5" />
+    <parameter name="softAssertEnabled" value="true" />
+    <!-- For soft assert, use assert APIs from  com.seleniumtests.core.CustomAssertion class-->
+    <parameter name="useFirefoxDefaultProfile" value="false"/>
+	<parameter name="cucumberPackage" value="com.infotel.seleniumTests.qwantTest" />
+	<parameter name="testType" value="Web" />
+	
+	<!-- On écrit un test en particulier sur l'environnement défini -->
+	<test name="testUn">
+    	<parameter name="cucumberTests" value="Qwant" />
+	    <parameter name="cucumberTags" value="" />
+	    <parameter name="variables" value="{'text':'cacahuète'}" />
+	    
+	    <parameter name="testType" value="Web" />
+	    
+        <packages>
+            <package name="com.seleniumtests.core.runner.*"/>
+        </packages>
+    </test>
+	
+</suite>
