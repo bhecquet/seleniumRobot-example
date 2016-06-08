@@ -4,6 +4,28 @@
   <artifactId>qwantTest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  <licenses>
+	<license>
+		<name>The Apache License, Version 2.0</name>
+		<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+	</license>
+  </licenses>
+  
+  <developers>
+        <developer>
+            <name>Sophie Ledos</name>
+            <email>sophie.ledos@infotel.com</email>
+            <organization>infotel</organization>
+            <organizationUrl>http://www.infotel.com</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git@github.com:bhecquet/seleniumRobot-example.git</connection>
+        <developerConnection>scm:git:git@github.com:bhecquet/seleniumRobot-example.git</developerConnection>
+        <url>git@github.com:bhecquet/seleniumRobot-example.git</url>
+    </scm>
+    
   <dependencies>
 		<dependency>
 			<groupId>com.infotel.seleniumRobot</groupId>
