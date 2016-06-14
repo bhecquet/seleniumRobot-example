@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.infotel.seleniumRobot</groupId>
   <artifactId>seleniumRobot-example</artifactId>
-  <version>1.0.0</version>
+  <version>1.2.0</version>
   
   <name>selenium robot example</name>
   <description>An example project on how to use SeleniumRobot project available at https://github.com/bhecquet/seleniumRobot</description>
@@ -149,8 +149,8 @@
 							<overWriteSnapshots>false</overWriteSnapshots>
 							<overWriteIfNewer>true</overWriteIfNewer>
 							<excludeTransitive>true</excludeTransitive>
-							<excludeGroupIds>com.seleniumtests</excludeGroupIds>
-							<excludeArtifactIds>seleniumtestsframework</excludeArtifactIds>
+							<excludeGroupIds>com.infotel.seleniumRobot</excludeGroupIds>
+							<excludeArtifactIds>core</excludeArtifactIds>
 						</configuration>
 					</execution>
 				</executions>
