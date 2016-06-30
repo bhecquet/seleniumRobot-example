@@ -3,11 +3,10 @@ package com.infotel.seleniumTests.qwantTest.webpage;
 
 import org.openqa.selenium.By;
 
-import com.seleniumtests.core.Locator;
-import com.seleniumtests.core.SeleniumTestsContextManager;
-import com.seleniumtests.webelements.PageObject;
-import com.seleniumtests.webelements.TextFieldElement;
-import com.seleniumtests.webelements.ButtonElement;
+import com.seleniumtests.uipage.Locator;
+import com.seleniumtests.uipage.PageObject;
+import com.seleniumtests.uipage.htmlelements.ButtonElement;
+import com.seleniumtests.uipage.htmlelements.TextFieldElement;
 
 public class QwantHomePage extends PageObject{
 	

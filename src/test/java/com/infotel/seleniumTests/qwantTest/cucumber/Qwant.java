@@ -3,8 +3,8 @@ package com.infotel.seleniumTests.qwantTest.cucumber;
 
 
 import com.infotel.seleniumTests.qwantTest.webpage.QwantHomePage;
-import com.seleniumtests.core.Locator;
-import com.seleniumtests.webelements.LinkElement;
+import com.seleniumtests.uipage.Locator;
+import com.seleniumtests.uipage.htmlelements.LinkElement;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
