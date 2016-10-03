@@ -31,11 +31,10 @@ public class Qwant {
 	}
 	@Then("clique mot (\\p{L}+)")
 	public void cliquerLienLievre(String keyWord) throws Exception {
-		if(myHomePage.isElementPresent(Locator.locateByLinkText(keyWord))){
 		linkWordToFind = new LinkElement("keyWord Link", Locator.locateByLinkText(keyWord));
-		linkWordToFind.click();
-		}
-		else{
+		if (linkWordToFind.isElementPresent()) {
+			linkWordToFind.click();
+		} else{
 			System.out.println("\nle mot : "+keyWord+" ne fait pas partie de la page ou n'est pas un lien.");
 		}
 	}
