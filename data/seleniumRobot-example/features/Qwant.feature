@@ -1,8 +1,8 @@
 Feature: Qwant
 
 	Scenario: qwant
-		When saisir cacahuète
-		Then clique rechercher
-		Then clique lien numéro 2
+		When saisir 'cacahuète'
+		And clique rechercher
+		And clique lien numéro 2
 		#Then clique mot graine
-		#Then rechercher présence mot cornichon
+		#Then rechercher présence mot 'cornichon'

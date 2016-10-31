@@ -2,6 +2,8 @@ package com.infotel.seleniumTests.qwantTest.cucumber;
 
 
 
+import org.testng.Assert;
+
 import com.infotel.seleniumTests.qwantTest.webpage.QwantHomePage;
 import com.seleniumtests.uipage.Locator;
 import com.seleniumtests.uipage.htmlelements.LinkElement;
@@ -15,38 +17,32 @@ public class Qwant {
 	private LinkElement linkToClick;
 	private LinkElement linkWordToFind;
 
-	@When("saisir ([\\p{L}\\s]+)")
-	public void saisirToto(String search) throws Exception {
+	@When("saisir '(.*?)'")
+	public void saisirChaineAChercher(String search) throws Exception {
 		myHomePage = new QwantHomePage(true).search(search);
 	}
-	@Then("clique rechercher")
+	
+	@When("clique rechercher")
 	public void rechercher() throws Exception {
 		myHomePage.search();	
 	}
-	@Then("clique lien numéro (\\d+)")
-	public void cliquerLienWikipedia(int num) throws Exception {
+	
+	@When("clique lien numéro (\\d+)")
+	public void cliquerLienWikipedia(Integer num) throws Exception {
 		linkToClick = new LinkElement("first Result", Locator.locateByXPath("(//span[@class='result--web--title'])["+num+"]"));
 		linkToClick.click();
 		myHomePage.selectNewWindow();
 	}
-	@Then("clique mot (\\p{L}+)")
+	
+	@When("clique mot (.*?)")
 	public void cliquerLienLievre(String keyWord) throws Exception {
 		linkWordToFind = new LinkElement("keyWord Link", Locator.locateByLinkText(keyWord));
-		if (linkWordToFind.isElementPresent()) {
-			linkWordToFind.click();
-		} else{
-			System.out.println("\nle mot : "+keyWord+" ne fait pas partie de la page ou n'est pas un lien.");
-		}
+		linkWordToFind.click();
 	}
-	@Then("rechercher présence mot (\\p{L}+)")
+	
+	@Then("rechercher présence mot '(.*?)'")
 	public void rechercherMotGibier(String searchWord) throws Exception {	
-		
-		if(myHomePage.isTextPresent(searchWord)){
-			System.out.println("\nle mot : "+searchWord+" fait parti de la page");
-		}
-		else{
-			System.out.println("\nle mot : "+searchWord+" ne fait pas parti de la page");
-		}
+		Assert.assertTrue(myHomePage.isTextPresent(searchWord));
 	}
 }
 
