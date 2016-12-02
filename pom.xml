@@ -2,12 +2,14 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.infotel.seleniumRobot</groupId>
   <artifactId>seleniumRobot-example</artifactId>
-  <version>2.0.0</version>
+  <version>2.1.0</version>
   
   <name>selenium robot example</name>
   <description>An example project on how to use SeleniumRobot project available at https://github.com/bhecquet/seleniumRobot</description>
   <url>https://github.com/bhecquet/seleniumRobot-example.git</url>
   
+  <!-- ####################################### -->
+  <!-- Not needed for typical test application -->
   <licenses>
 	<license>
 		<name>The Apache License, Version 2.0</name>
@@ -19,6 +21,12 @@
         <developer>
             <name>Sophie Ledos</name>
             <email>sophie.ledos@infotel.com</email>
+            <organization>infotel</organization>
+            <organizationUrl>http://www.infotel.com</organizationUrl>
+        </developer>
+        <developer>
+            <name>Bertrand Hecquet</name>
+            <email>bertrand.hecquet@infotel.com</email>
             <organization>infotel</organization>
             <organizationUrl>http://www.infotel.com</organizationUrl>
         </developer>
@@ -40,12 +48,15 @@
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
 	</distributionManagement>
+	
+	<!-- /Not needed for typical test application -->
+	<!-- ####################################### -->
     
   	<dependencies>
 		<dependency>
 			<groupId>com.infotel.seleniumRobot</groupId>
 			<artifactId>core</artifactId>
-			<version>[2.0.0,)</version>
+			<version>[2.4.1,)</version>
 		</dependency>
 	</dependencies>
 	
@@ -57,6 +68,9 @@
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
+		
+			<!-- ####################################### -->
+  			<!-- Not needed for typical test application -->
 			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
@@ -112,6 +126,9 @@
 					<dependencyLocationsEnabled>false</dependencyLocationsEnabled>
 				</configuration>
 			</plugin>
+			<!-- /Not needed for typical test application -->
+			<!-- ####################################### -->
+			
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.5.1</version>

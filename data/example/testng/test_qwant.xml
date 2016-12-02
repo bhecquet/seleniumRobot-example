@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<suite name="Qwant Suite" parallel="methods" verbose="1" thread-count="5">
+    
+    <!-- mandatory parameter for cucumber based tests -->
+	<parameter name="cucumberPackage" value="com.infotel.seleniumRobot.example" />
+	
+	<!-- Cucumber test example -->
+	<test name="testCucumber">
+    	<parameter name="cucumberTests" value="search" />
+	    <parameter name="cucumberTags" value="" />
+	    
+        <packages>
+            <package name="com.seleniumtests.core.runner.*"/>
+        </packages>
+    </test>
+    
+    <test name="testNg">
+    	<classes>
+            <class name="com.infotel.seleniumRobot.example.tests.QwantSearch"/>
+        </classes>
+    </test>
+	
+</suite>
