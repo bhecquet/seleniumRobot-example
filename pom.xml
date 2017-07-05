@@ -361,6 +361,23 @@
 				  	</execution>
 				</executions>
 			</plugin>
+			<plugin>
+			    <artifactId>maven-antrun-plugin</artifactId>
+			    <version>1.7</version>
+			    <executions>
+			        <execution>
+			            <phase>generate-sources</phase>
+			            <configuration>
+			                <target>
+			                    <echo file="${project.basedir}/target/test-classes/${project.artifactId}-version.txt">${project.version}</echo>
+			                </target>
+			            </configuration>
+			            <goals>
+			                <goal>run</goal>
+			            </goals>
+			        </execution>
+			    </executions>
+			</plugin>
 		</plugins>
 	
 	</build>
