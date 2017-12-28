@@ -226,7 +226,7 @@
 						<configuration>
 							<outputDirectory>${project.build.directory}/data/${project.artifactId}/config</outputDirectory>
 							<!-- For running multiple versions of the same application on the seleniumRobot core, use the following line instead of the above
-							<outputDirectory>${project.build.directory}/data/${project.artifactId}-${application.version.short}/config</outputDirectory>
+							<outputDirectory>${project.build.directory}/data/${project.artifactId}_${application.version.short}/config</outputDirectory>
 							-->
 							<resources>
 								<resource>
@@ -244,7 +244,7 @@
 						<configuration>
 							<outputDirectory>${project.build.directory}/data/${project.artifactId}/features</outputDirectory>
 							<!-- For running multiple versions of the same application on the seleniumRobot core, use the following line instead of the above
-							<outputDirectory>${project.build.directory}/data/${project.artifactId}-${application.version.short}/features</outputDirectory>
+							<outputDirectory>${project.build.directory}/data/${project.artifactId}_${application.version.short}/features</outputDirectory>
 							-->
 							<resources>
 							
@@ -263,7 +263,7 @@
 						<configuration>
 							<outputDirectory>${project.build.directory}/data/${project.artifactId}/testng</outputDirectory>
 							<!-- For running multiple versions of the same application on the seleniumRobot core, use the following line instead of the above
-							<outputDirectory>${project.build.directory}/data/${project.artifactId}-${application.version.short}/testng</outputDirectory>
+							<outputDirectory>${project.build.directory}/data/${project.artifactId}_${application.version.short}/testng</outputDirectory>
 							-->
 							<resources>
 							
