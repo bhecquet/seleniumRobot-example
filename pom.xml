@@ -56,7 +56,7 @@
 		<dependency>
 			<groupId>com.infotel.seleniumRobot</groupId>
 			<artifactId>core</artifactId>
-			<version>[2.4.1,)</version>
+			<version>[3.5.3,)</version>
 		</dependency>
 	</dependencies>
 	
@@ -67,6 +67,10 @@
 	
 	<build>
 		<finalName>${project.artifactId}</finalName>
+		
+		<!-- For running multiple versions of the same application on the seleniumRobot core, use the following line instead of the above
+		<finalName>${project.artifactId}-${application.version.short}</finalName>
+		-->
 		<plugins>
 		
 			<!-- ####################################### -->
@@ -172,6 +176,28 @@
 					</execution>
 				</executions>
 			</plugin>
+			<!-- the following plugin will create the variable 'application.version.short' which can be used to execute several versions of the same application on the same core -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<id>regex-property</id>
+						<goals>
+							<goal>regex-property</goal>
+						</goals>
+						<configuration>
+
+							<name>application.version.short</name>
+							<value>${project.version}</value>
+							<regex>^([0-9]+)\.([0-9]+)\.([0-9]+)(-SNAPSHOT)?$</regex>
+							<replacement>$1.$2</replacement>
+							<failIfNoMatch>true</failIfNoMatch>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>2.7</version>
@@ -198,6 +224,9 @@
 						</goals>
 						<configuration>
 							<outputDirectory>${project.build.directory}/data/${project.artifactId}/config</outputDirectory>
+							<!-- For running multiple versions of the same application on the seleniumRobot core, use the following line instead of the above
+							<outputDirectory>${project.build.directory}/data/${project.artifactId}-${application.version.short}/config</outputDirectory>
+							-->
 							<resources>
 								<resource>
 									<directory>${project.basedir}/data/${project.artifactId}/config</directory>
@@ -213,6 +242,9 @@
 						</goals>
 						<configuration>
 							<outputDirectory>${project.build.directory}/data/${project.artifactId}/features</outputDirectory>
+							<!-- For running multiple versions of the same application on the seleniumRobot core, use the following line instead of the above
+							<outputDirectory>${project.build.directory}/data/${project.artifactId}-${application.version.short}/features</outputDirectory>
+							-->
 							<resources>
 							
 								<resource>
@@ -229,6 +261,9 @@
 						</goals>
 						<configuration>
 							<outputDirectory>${project.build.directory}/data/${project.artifactId}/testng</outputDirectory>
+							<!-- For running multiple versions of the same application on the seleniumRobot core, use the following line instead of the above
+							<outputDirectory>${project.build.directory}/data/${project.artifactId}-${application.version.short}/testng</outputDirectory>
+							-->
 							<resources>
 							
 								<resource>
@@ -280,6 +315,7 @@
 				<artifactId>aspectj-maven-plugin</artifactId>
 				<version>1.8</version>
 				<configuration>
+					<showWeaveInfo>true</showWeaveInfo>
 					<aspectLibraries>
 						<aspectLibrary>
 							<groupId>com.infotel.seleniumRobot</groupId>
