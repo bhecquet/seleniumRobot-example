@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
-<suite name="Qwant Suite" parallel="methods" verbose="1" thread-count="5">
+<suite name="Qwant Suite" parallel="tests" verbose="1" thread-count="5">
     
     <!-- mandatory parameter for cucumber based tests -->
 	<parameter name="cucumberPackage" value="com.infotel.seleniumRobot.example" />
+	<parameter name="seleniumRobotServerUrl" value="http://z8i7229v.itsoc.itmma.fr:8888"></parameter>
+	<parameter name="seleniumRobotServerActive" value="true"></parameter>
 	
 	<!-- Cucumber test example -->
 	<test name="testCucumber">
-    	<parameter name="cucumberTests" value="search" />
+    	<parameter name="cucumberTests" value="search,search with failure,search something" />
 	    <parameter name="cucumberTags" value="" />
 	    
         <packages>

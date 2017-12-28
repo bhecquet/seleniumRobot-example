@@ -39,7 +39,8 @@ public class QwantHomePage extends PageObject{
     
     @When("type '(.*?)'")
     public QwantHomePage searchText(String search) {
-    	searchTextBox.sendKeys(search);
+    	driver.findElement(By.className("search_bar__form__input")).sendKeys(search);
+//    	searchTextBox.sendKeys(search);
     	return this;
     }
     
