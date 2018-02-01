@@ -8,7 +8,7 @@ Feature: Qwant
 
 	Scenario: search with failure
 		Given access qwant
-		When type 'peanut'
+		When type 'pea@nut'
 		And start search
 		Then check result contains 'pnut'
 		

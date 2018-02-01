@@ -9,8 +9,10 @@ public class QwantSearch extends SeleniumTestPlan {
 
 	@Test(groups={"integration"})
 	public void testSearch() throws Exception {
-		new QwantHomePage(true).searchText("peanut")
+		new QwantHomePage(true)
+						.searchText("peanut")
 						.search()
-						.checkResultContains("peanut");
+						.checkResultContains("peanut")
+						;
 	}
 }
