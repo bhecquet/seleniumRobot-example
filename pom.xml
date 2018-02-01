@@ -57,7 +57,7 @@
 		<dependency>
 			<groupId>com.infotel.seleniumRobot</groupId>
 			<artifactId>core</artifactId>
-			<version>[3.5.3,)</version>
+			<version>[3.6.0,)</version>
 		</dependency>
 	</dependencies>
 	
