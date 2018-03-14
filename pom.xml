@@ -224,51 +224,13 @@
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${project.build.directory}/data/${project.artifactId}/config</outputDirectory>
+							<outputDirectory>${project.build.directory}/data/${project.artifactId}</outputDirectory>
 							<!-- For running multiple versions of the same application on the seleniumRobot core, use the following line instead of the above
-							<outputDirectory>${project.build.directory}/data/${project.artifactId}_${application.version.short}/config</outputDirectory>
+							<outputDirectory>${project.build.directory}/data/${project.artifactId}_${application.version.short}</outputDirectory>
 							-->
 							<resources>
 								<resource>
-									<directory>${project.basedir}/data/${project.artifactId}/config</directory>
-								</resource>
-							</resources>
-						</configuration>            
-					</execution>
-					<execution>
-						<id>copy-features</id>
-						<phase>process-resources</phase>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${project.build.directory}/data/${project.artifactId}/features</outputDirectory>
-							<!-- For running multiple versions of the same application on the seleniumRobot core, use the following line instead of the above
-							<outputDirectory>${project.build.directory}/data/${project.artifactId}_${application.version.short}/features</outputDirectory>
-							-->
-							<resources>
-							
-								<resource>
-									<directory>${project.basedir}/data/${project.artifactId}/features</directory>
-								</resource>
-							</resources>
-						</configuration>            
-					</execution>
-					<execution>
-						<id>copy-testng</id>
-						<phase>process-resources</phase>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${project.build.directory}/data/${project.artifactId}/testng</outputDirectory>
-							<!-- For running multiple versions of the same application on the seleniumRobot core, use the following line instead of the above
-							<outputDirectory>${project.build.directory}/data/${project.artifactId}_${application.version.short}/testng</outputDirectory>
-							-->
-							<resources>
-							
-								<resource>
-									<directory>${project.basedir}/data/${project.artifactId}/testng</directory>
+									<directory>${project.basedir}/data/${project.artifactId}</directory>
 								</resource>
 							</resources>
 						</configuration>            
