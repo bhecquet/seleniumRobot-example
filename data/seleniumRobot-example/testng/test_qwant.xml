@@ -4,6 +4,7 @@
     
     <!-- mandatory parameter for cucumber based tests -->
 	<parameter name="cucumberPackage" value="com.infotel.seleniumRobot.example" />
+	<parameter name="devMode" value="false" />
 	
 	<!-- Cucumber test example -->
 	<test name="testCucumber">
@@ -17,7 +18,11 @@
     
     <test name="testNg">
     	<classes>
-            <class name="com.infotel.seleniumRobot.example.tests.QwantSearch"/>
+            <class name="com.infotel.seleniumRobot.example.tests.QwantSearch">
+            	<methods>
+                    <include name="testSearch" description="a test to search for peanut" />
+                </methods>
+            </class>
         </classes>
     </test>
 	

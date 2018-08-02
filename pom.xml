@@ -36,6 +36,7 @@
         <connection>scm:git:git@github.com:bhecquet/seleniumRobot-example.git</connection>
         <developerConnection>scm:git:git@github.com:bhecquet/seleniumRobot-example.git</developerConnection>
         <url>git@github.com:bhecquet/seleniumRobot-example.git</url>
+        
       <tag>HEAD</tag>
   </scm>
     
@@ -57,7 +58,13 @@
 		<dependency>
 			<groupId>com.infotel.seleniumRobot</groupId>
 			<artifactId>core</artifactId>
-			<version>[3.6.0,)</version>
+			<version>[3.9.1,)</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.oracle</groupId>
+					<artifactId>ojdbc6</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
 	
@@ -278,7 +285,7 @@
 				<artifactId>aspectj-maven-plugin</artifactId>
 				<version>1.8</version>
 				<configuration>
-					<showWeaveInfo>true</showWeaveInfo>
+					<showWeaveInfo>false</showWeaveInfo>
 					<aspectLibraries>
 						<aspectLibrary>
 							<groupId>com.infotel.seleniumRobot</groupId>
