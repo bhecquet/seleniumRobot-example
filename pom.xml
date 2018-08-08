@@ -19,16 +19,10 @@
   
   <developers>
         <developer>
-            <name>Sophie Ledos</name>
-            <email>sophie.ledos@infotel.com</email>
-            <organization>infotel</organization>
-            <organizationUrl>http://www.infotel.com</organizationUrl>
-        </developer>
-        <developer>
             <name>Bertrand Hecquet</name>
-            <email>bertrand.hecquet@infotel.com</email>
-            <organization>infotel</organization>
-            <organizationUrl>http://www.infotel.com</organizationUrl>
+            <email>bertrand.hecquet@groupe-mma.fr</email>
+            <organization>covea</organization>
+            <organizationUrl>http://www.covea.eu</organizationUrl>
         </developer>
     </developers>
 
@@ -283,7 +277,14 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>aspectj-maven-plugin</artifactId>
-				<version>1.8</version>
+				<version>1.11</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.aspectj</groupId>
+			            <artifactId>aspectjtools</artifactId>
+			            <version>${aspectj.version}</version>
+					</dependency>
+				</dependencies>
 				<configuration>
 					<showWeaveInfo>false</showWeaveInfo>
 					<aspectLibraries>
