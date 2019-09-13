@@ -14,11 +14,11 @@ public class QwantSearchManualSteps extends SeleniumTestPlan {
 		QwantHomePage page = new QwantHomePage(true);
 		
 		addStep("Search text");
-		page.searchText("peanut");
-		page.search();
+		page._searchText("peanut");
+		page._search();
 		TestLogging.logTestValue("key", "search done", "peanut");
 		
 		addStep("display results");
-		page.checkResultContains("peanut");
+		page._checkResultContains("peanut");
 	}
 }
