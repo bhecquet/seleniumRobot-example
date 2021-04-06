@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.infotel.seleniumRobot</groupId>
   <artifactId>seleniumRobot-example</artifactId>
-  <version>4.0.2-SNAPSHOT</version>
+  <version>4.0.3-SNAPSHOT</version>
   
   <name>selenium robot example</name>
   <description>An example project on how to use SeleniumRobot project available at https://github.com/bhecquet/seleniumRobot</description>
