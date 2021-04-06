@@ -19,9 +19,6 @@
     <test name="testNg">
     	<classes>
             <class name="com.infotel.seleniumRobot.example.tests.QwantSearch">
-            	<methods>
-                    <include name="testSearch" description="a test to search for peanut" />
-                </methods>
             </class>
         </classes>
     </test>

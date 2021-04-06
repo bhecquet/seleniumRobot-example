@@ -300,11 +300,15 @@
 					</dependency>
 				</dependencies>
 				<configuration>
-					<showWeaveInfo>false</showWeaveInfo>
+					<showWeaveInfo>true</showWeaveInfo>
 					<aspectLibraries>
 						<aspectLibrary>
 							<groupId>com.infotel.seleniumRobot</groupId>
 							<artifactId>core</artifactId>
+						</aspectLibrary>
+						<aspectLibrary>
+							<groupId>com.epam.reportportal</groupId>
+      						<artifactId>client-java</artifactId>
 						</aspectLibrary>
 					</aspectLibraries>
 					<complianceLevel>1.8</complianceLevel>

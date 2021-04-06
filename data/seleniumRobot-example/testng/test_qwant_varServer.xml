@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Qwant Suite" parallel="tests" verbose="1" thread-count="5">
+    
+    <!-- mandatory parameter for cucumber based tests -->
+	<parameter name="cucumberPackage" value="com.infotel.seleniumRobot.example" />
+	<parameter name="seleniumRobotServerUrl" value="http://localhost:8002"></parameter>
+	<parameter name="seleniumRobotServerActive" value="true"></parameter>
+	<parameter name="seleniumRobotServerCompareSnapshots" value="true"></parameter>
+	<parameter name="seleniumRobotServerRecordResults" value="true"></parameter>
+	<parameter name="tmsType" value="squash"></parameter>
+	<parameter name="tmsUrl" value="http://localhost:8080/squash/"></parameter>
+	<parameter name="tmsUser" value="admin"></parameter>
+	<parameter name="tmsPassword" value="admin"></parameter>
+	<parameter name="tmsProject" value="Test Project-1"></parameter>
+	
+	<!-- Cucumber test example -->
+	<test name="testCucumber">
+    	<parameter name="cucumberTests" value="search,search with failure,search something" />
+	    <parameter name="cucumberTags" value="" />
+	    
+        <packages>
+            <package name="com.seleniumtests.core.runner.*"/>
+        </packages>
+    </test>
+    
+    <test name="testNg">
+    	<classes>
+            <class name="com.infotel.seleniumRobot.example.tests.QwantSearch"/>
+        </classes>
+    </test>
+	
+</suite>
