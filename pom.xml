@@ -52,7 +52,7 @@
 		<dependency>
 			<groupId>com.infotel.seleniumRobot</groupId>
 			<artifactId>core</artifactId>
-			<version>[4.22.0,)</version>
+			<version>[4.23.1,)</version>
 			<exclusions>
 				<exclusion>
 					<groupId>com.oracle</groupId>
